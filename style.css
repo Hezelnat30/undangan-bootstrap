@@ -1,0 +1,254 @@
+:root {
+    --pink: #fb6ba9;
+    --bg: #121416;
+    --shadow:0 2px 2px rgba(0,0,0,.5)
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    min-height: 2000px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/Free\ Photo\ _\ Engagement\ proposal\ hands\ with\ man\ and\ woman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: grayscale(20%) blur(5px)
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    /* background-color: var(--bg); */
+}
+
+.hero h1, .hero h4, .hero p {
+    text-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 7.2rem;
+}
+
+.hero h4 {
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+}
+
+.hero a {
+    color: var(--pink);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+    color: #fff;
+    background-color: var(--pink);
+}
+
+.my-navbar {
+    background-color: rgba(245, 240, 245, .3) !important;
+    backdrop-filter: blur(4px);
+}
+
+.my-navbar .offcanvas {
+    height: 100vh;
+}
+
+.my-navbar .navbar-brand, 
+.my-navbar .offcanvas-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.4rem;
+}
+
+.my-navbar .nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.home {
+    background-size: cover;
+    background-image: url(img/floralpattern.png);
+    min-height: 100vh;
+    background-position: center;
+    margin-top: -5rem;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+}
+
+.home h2, .info h2 {
+    color: var(--pink);
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.home h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.home p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.home .couple {
+    margin-top: 100px;
+}
+
+.home .couple h3 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.4rem;
+    color: var(--pink);
+}
+
+.home .couple img {
+    width: 100%;
+}
+
+.home .heart {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0,0, .5);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(65px);
+}
+
+.home .heart i {
+    margin: auto;
+    color: var(--pink);
+    font-size: 1.6rem;
+}
+
+.info {
+    background-color: var(--bg);
+    color: aliceblue;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.info .alamat {
+    font-size: 1.2rem;
+}
+
+.info .description {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.info .card {
+    background-color: rgba(245,250,240, .5) !important;
+    color: white !important;
+    border: 1px solid #eaeaea;
+}
+
+.info .card-header {
+    border-bottom: 1px solid #eaeaea;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.info .card-body {
+    font-size: 1rem;
+}
+
+.info .card-footer {
+    border-top: 1px solid #eaeaea;
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+
+
+
+
+.audio-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: .5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Responsive */
+@media screen and (max-width: 1200px){
+    .home .heart {
+        transform: translateX(-50%) translateY(45px);
+    }
+}
+
+@media screen and (max-width: 992px){
+    * {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    * {
+        font-size: 66%;
+    }
+    .simply-countdown > .simply-section {
+        padding: 60px;
+        margin: 5px;
+    }
+    .my-navbar .nav-link {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .sticky-top {
+        overflow-x: hidden;
+    }
+    .home .heart {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px){
+    * {
+        font-size: 60%;
+    }
+    .simply-countdown > .simply-section {
+        padding: 46px;
+        margin: 3px;
+    }
+}
