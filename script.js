@@ -10,16 +10,17 @@ function disableScroll() {
     window.onscroll = function () {
         window.scrollTo(scrollTop, scrollLeft);
     }
-
+    
     rootElement.style.scrollBehavior = 'auto';
 }
-function enableScroll() {
-    window.onscroll = function () {
-    rootElement.style.scrollBehavior = 'smooth'
 
+function enableScroll() {
+    window.onscroll = function () {}
+    rootElement.style.scrollBehavior = 'smooth'
+        
     playAudio();
-    }
 }
+disableScroll()
 
 function playAudio() {
     song.volume = 0.5;
@@ -42,8 +43,7 @@ audioIconWrapper.onclick = function () {
     isPlaying = !isPlaying;
 }
 
-disableScroll()
-
+// Navbar
 const hamburger = document.querySelector('.navbar-toggler');
 const stickyTop = document.querySelector('.sticky-top');
 
@@ -54,3 +54,20 @@ const offcanvas = document.querySelector('.offcanvas');
 offcanvas.addEventListener('hidden.bs.offcanvas', function () {
     stickyTop.style.overflow = 'hidden';
 })
+
+// Form
+window.addEventListener("load", function() {
+    const form = document.getElementById('my-form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        alert("Konfirmasi Kehadiran Terkirim!");
+      })
+    });
+  });

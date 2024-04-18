@@ -50,7 +50,7 @@
                         <a class="nav-link" href="#home">Home</a>
                         <a class="nav-link" href="#info">Info</a>
                         <a class="nav-link" href="#story">Story</a>
-                        <a class="nav-link" href="#gallery">RSVP</a>
+                        <a class="nav-link" href="#rsvp">RSVP</a>
                         <a class="nav-link" href="#gallery">Gallery</a>
                     </div>
                 </div>
@@ -302,12 +302,54 @@
                     </a>
                 </div>
             </div>
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center flex-column py-3">
+                <h2>Kisah Cinta Dalam Gerak</h2>
                 <video width="640" height="360" controls>
                     <source src="video/PREWEDVID.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
+        </div>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-10 text-center">
+                    <h2>Konfirmasi Kehadiran</h2>
+                    <p>Isi Form dibawah ini untuk melakukan konfirmasi kehadiran.</p>
+                </div>
+            </div>
+            <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" id="my-form" method="POST"
+                action="https://script.google.com/macros/s/AKfycbxe6O_FJHne7Lk2rkFo7xTWGkkN59HvaaFqB9dKAlEQPEwp2qkoHcrkP4QbV_NLmALk/exec">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label text-white">Nama</label>
+                        <input type="text" class="form-control" id="nama" name="nama">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="jumlah" class="form-label text-white">Jumlah</label>
+                        <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="3" length="1"
+                            value="1">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="status" class="form-label text-white">Konfirmasi</label>
+                        <select type="number" class="form-select" id="status" name="status" min="1" max="3" length="1"
+                            value="1">
+                            <option selected>Bisa Hadir/Tidak</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 align-self-center">
+                    <button class="btn btn-primary btn-rsvp">Submit</button>
+                </div>
+            </form>
         </div>
     </section>
 
