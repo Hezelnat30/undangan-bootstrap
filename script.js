@@ -43,3 +43,14 @@ audioIconWrapper.onclick = function () {
 }
 
 disableScroll()
+
+const hamburger = document.querySelector('.navbar-toggler');
+const stickyTop = document.querySelector('.sticky-top');
+
+hamburger.addEventListener('show.bs.offcanvas', function () {
+    stickyTop.style.overflow = 'visible';
+})
+const offcanvas = document.querySelector('.offcanvas');
+offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+    stickyTop.style.overflow = 'hidden';
+})
